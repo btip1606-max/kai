@@ -30,7 +30,7 @@ jobs:
 
           echo "=== Build outputs ==="
           ls -la
-          test -f lua && echo "Found: lua" || (echo "Missing: lua"; exit 1)
+          test -f lua.exe && echo "Found: lua.exe" || (echo "Missing: lua.exe"; exit 1)
           test -f liblua.a && echo "Found: liblua.a" || (echo "Missing: liblua.a"; exit 1)
 
       - name: Upload artifacts
@@ -38,5 +38,5 @@ jobs:
         with:
           name: lua-windows
           path: |
-            lua
+            lua.exe
             liblua.a
