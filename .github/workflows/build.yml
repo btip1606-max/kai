@@ -38,5 +38,5 @@ jobs:
         with:
           name: soapscript-windows
           path: |
-            soapscript.exe
-            soapscript.a
+            lua.exe
+            lua.a
