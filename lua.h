@@ -13,13 +13,13 @@
 #include <stddef.h>
 
 
-#define LUA_COPYRIGHT	LUA_RELEASE "  Copyright (C) 1994-2026 Lua.org, PUC-Rio"
-#define LUA_AUTHORS	"R. Ierusalimschy, L. H. de Figueiredo, W. Celes"
+#define LUA_COPYRIGHT	LUA_RELEASE "  Copyright (C) 2025-2026 , si"
+#define LUA_AUTHORS	"si Man, senior"
 
 
-#define LUA_VERSION_MAJOR_N	5
-#define LUA_VERSION_MINOR_N	5
-#define LUA_VERSION_RELEASE_N	1
+#define LUA_VERSION_MAJOR_N	1
+#define LUA_VERSION_MINOR_N	0
+#define LUA_VERSION_RELEASE_N	0
 
 #define LUA_VERSION_NUM  (LUA_VERSION_MAJOR_N * 100 + LUA_VERSION_MINOR_N)
 #define LUA_VERSION_RELEASE_NUM  (LUA_VERSION_NUM * 100 + LUA_VERSION_RELEASE_N)
