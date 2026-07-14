@@ -13,7 +13,7 @@
 #include <stddef.h>
 
 
-#define LUA_COPYRIGHT	LUA_RELEASE "  Copyright (C) 2025-2026 , si"
+#define LUA_COPYRIGHT	LUA_RELEASE "  SoapScript Copyright (C) 2025-2026 , si"
 #define LUA_AUTHORS	"si Man, senior"
 
 
@@ -516,7 +516,7 @@ struct lua_Debug {
 #define LUA_VERSION_MINOR	LUAI_TOSTR(LUA_VERSION_MINOR_N)
 #define LUA_VERSION_RELEASE	LUAI_TOSTR(LUA_VERSION_RELEASE_N)
 
-#define LUA_VERSION	"Lua " LUA_VERSION_MAJOR "." LUA_VERSION_MINOR
+#define LUA_VERSION	"SoapScript " LUA_VERSION_MAJOR "." LUA_VERSION_MINOR
 #define LUA_RELEASE	LUA_VERSION "." LUA_VERSION_RELEASE
 
 

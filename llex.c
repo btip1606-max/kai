@@ -34,7 +34,7 @@
 
 /* minimum size for string buffer */
 #if !defined(LUA_MINBUFFER)
-#define LUA_MINBUFFER   32
+#define LUA_MINBUFFER   64
 #endif
 
 
@@ -44,14 +44,14 @@
 /* ORDER RESERVED */
 
 //THINK OF IT AS THIS 
-//if = as, recur = repeat, other = else, otheras = elseif, native = local, broad = global, job = function
-// $$ = COMMENTS
+//if = as, recur = repeat, other = else, otheras = elseif, sop = local, break = disrupt , job = function, global = soap
+
 static const char *const luaX_tokens [] = {
-    "and", "break", "do", "other", "otheras",
-    "end", "false", "for", "job", "broad", "goto", "as",
-    "in", "native", "nil", "not", "or", "repeat",
+    "and", "disrupt", "do", "other", "otheras",
+    "end", "false", "for", "job", "soap", "goto", "as",
+    "in", "sop", "nil", "not", "or", "repeat",
     "recur", "then", "true", "until", "while",
-    "$$", "..", "...", "==", ">=", "<=", "~=",
+    "//", "..", "...", "==", ">=", "<=", "~=",
     "<<", ">>", "::", "<eof>",
     "<number>", "<integer>", "<name>", "<string>"
 };
@@ -480,7 +480,7 @@ static int llex (LexState *ls, SemInfo *seminfo) {
         next(ls);
         break;
       }
-      case '-': {  /* '-' or '--' (comment) */
+      case '$': {  /* '-' or '--' (comment) */
         next(ls);
         if (ls->current != '-') return '-';
         /* else is a comment */
@@ -605,4 +605,3 @@ int luaX_lookahead (LexState *ls) {
   ls->lookahead.token = llex(ls, &ls->lookahead.seminfo);
   return ls->lookahead.token;
 }
-
