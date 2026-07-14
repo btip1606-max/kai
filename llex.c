@@ -42,12 +42,16 @@
 
 
 /* ORDER RESERVED */
+
+//THINK OF IT AS THIS 
+//if = as, recur = repeat, other = else, otheras = elseif, native = local, broad = global, job = function
+// $$ = COMMENTS
 static const char *const luaX_tokens [] = {
-    "and", "break", "do", "else", "elseif",
-    "end", "false", "for", "function", "global", "goto", "if",
-    "in", "local", "nil", "not", "or", "repeat",
-    "return", "then", "true", "until", "while",
-    "//", "..", "...", "==", ">=", "<=", "~=",
+    "and", "break", "do", "other", "otheras",
+    "end", "false", "for", "job", "broad", "goto", "as",
+    "in", "native", "nil", "not", "or", "repeat",
+    "recur", "then", "true", "until", "while",
+    "$$", "..", "...", "==", ">=", "<=", "~=",
     "<<", ">>", "::", "<eof>",
     "<number>", "<integer>", "<name>", "<string>"
 };
