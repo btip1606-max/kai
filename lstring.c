@@ -34,7 +34,7 @@
 ** a few dozens more.
 */
 #if !defined(MINSTRTABSIZE)
-#define MINSTRTABSIZE   128
+#define MINSTRTABSIZE   135
 #endif
 
 
